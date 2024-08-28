@@ -4,13 +4,13 @@ class Usuario(db.Model):
     __tablename__="usuario"
     id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
-    email = db.Column(db.String(100))
-    idade = db.Column(db.Integer)
+    data_inicio = db.Column(db.Date)
+    data_termino = db.Column(db.Date)
     #construtor
-    def __init__(self, nome, email, idade):
+    def __init__(self, nome, data_inicio, data_termino):
         self.nome = nome
-        self.email = email
-        self.idade = idade 
+        self.data_inicio = data_inicio
+        self.data_termino = data_termino
     # representação do objeto
     def __rep__(self):
         return "<Usuario {}>".format(self.nome)

@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = 'HASH-HASH-INVASOR_FDP@ablebleblebel_kshg**fiekn67gfs
 
 
 # drive://usuario:senha@servidor/banco_de_dados
-conexao = "mysql+pymysql://alunos:cefetmg@127.0.0.1/alunos"
+conexao = "mysql+pymysql://alunos:cefetmg@127.0.0.1/Projeto"
 app.config['SQLALCHEMY_DATABASE_URI'] = conexao
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

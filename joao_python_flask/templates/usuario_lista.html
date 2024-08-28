@@ -6,14 +6,14 @@
         <table>
             <tr>
                 <th>Nome</th>
-                <th>E-mail</th>
-                <th>Idade</th>
+                <th>Data inicio</th>
+                <th>Data termino</th>
             </tr>
             {% for usuario in dados%}
             <tr>
                 <td>{{usuario.nome}}</td>
-                <td>{{usuario.email}}</td>
-                <td>{{usuario.idade}}</td>
+                <td>{{usuario.data_inicio}}</td>
+                <td>{{usuario.data_termino}}</td>
             </tr>
             {% endfor %}
         </table>
