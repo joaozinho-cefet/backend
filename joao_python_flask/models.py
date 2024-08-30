@@ -1,7 +1,7 @@
 from database import db
 
-class Usuario(db.Model):
-    __tablename__="usuario"
+class Projeto(db.Model):
+    __tablename__="projeto"
     id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
     data_inicio = db.Column(db.Date)
@@ -13,4 +13,4 @@ class Usuario(db.Model):
         self.data_termino = data_termino
     # representação do objeto
     def __rep__(self):
-        return "<Usuario {}>".format(self.nome)
+        return "<projeto {}>".format(self.nome)

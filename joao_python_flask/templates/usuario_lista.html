@@ -2,7 +2,13 @@
 
 {% block conteudo %}
     
-    <a href="/usuario/add">+ Adicionar</a>
+{% set mensagens = get_flashed_messages() %}
+{% if mensagens %}
+    {% for msg in mensagens %}
+        {{ msg }}
+    {% endif %}   
+
+<a href="/projeto/add">+ Adicionar</a>
         <table>
             <tr>
                 <th>Nome</th>
