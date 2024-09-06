@@ -6,20 +6,29 @@
 {% if mensagens %}
     {% for msg in mensagens %}
         {{ msg }}
+        {% endfor %}
     {% endif %}   
 
 <a href="/projeto/add">+ Adicionar</a>
         <table>
             <tr>
-                <th>Nome</th>
+                <th>Nome Projeto</th>
                 <th>Data inicio</th>
                 <th>Data termino</th>
+                <th>Editar</th>
+                <th>Remove</th>
             </tr>
-            {% for usuario in dados%}
+            {% for projeto in dados%}
             <tr>
-                <td>{{usuario.nome}}</td>
-                <td>{{usuario.data_inicio}}</td>
-                <td>{{usuario.data_termino}}</td>
+                <td>{{projeto.nome}}</td>
+                <td>{{projeto.data_inicio}}</td>
+                <td>{{projeto.data_termino}}</td>
+                <td>
+                    <a href="/projeto/edita/{{projeto.id}}">Editar</a>
+                </td>
+                <td>
+                    <a href="/projeto/remove/{{projeto.id}}">remover</a>
+                </td>
             </tr>
             {% endfor %}
         </table>

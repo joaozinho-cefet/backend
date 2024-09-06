@@ -9,14 +9,16 @@
 {% endfor %}
 {% endif %}
 
-<form action="/projeto/save" method="post">
+<form action="/projeto/editasave" method="post">
+    <imput type="hidden" name='id' value="{{dados.id}}">
     <label for="nome">Nome Projeto:</label>
-    <input type="text" name="nome" id="nome">
+    <input type="text" name="nome" id="nome" value="{{dados.nome}}">
     <label for="data_i">Data_Inicio:</label>
-    <input type="date" name="data_i" id="data_i">
+    <input type="date" name="data_i" id="data_i" value="{{dados.data_i}}">
     <label for="data_f">Data_Termino:</label>
-    <input type="date" name="data_f" id="data_f">
+    <input type="date" name="data_f" id="data_f" value="{{dados.data_f}}"> 
     <button type="submit">Salvar</Button>
+</form>
 
 
 {%  endblock %}
