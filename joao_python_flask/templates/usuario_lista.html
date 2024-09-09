@@ -12,11 +12,11 @@
 <a href="/projeto/add">+ Adicionar</a>
         <table>
             <tr>
-                <th>Nome Projeto</th>
-                <th>Data inicio</th>
-                <th>Data termino</th>
-                <th>Editar</th>
-                <th>Remove</th>
+                <th> Nome Projeto </th>
+                <th> Data inicio </th>
+                <th> Data termino </th>
+                <th> Editar </th>
+                <th> Remove </th>
             </tr>
             {% for projeto in dados%}
             <tr>
@@ -24,10 +24,10 @@
                 <td>{{projeto.data_inicio}}</td>
                 <td>{{projeto.data_termino}}</td>
                 <td>
-                    <a href="/projeto/edita/{{projeto.id}}">Editar</a>
+                    <a href="/projeto/edita/{{projeto.id}}"> Editar </a>
                 </td>
                 <td>
-                    <a href="/projeto/remove/{{projeto.id}}">remover</a>
+                    <a href="/projeto/remove/{{projeto.id}}"> Remover </a>
                 </td>
             </tr>
             {% endfor %}
